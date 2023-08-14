@@ -1,0 +1,4 @@
+﻿  Level1.cpp
+  Player.cpp
+C:\Users\paulo\Projetos\Judson\Asteroids\Asteroids\PacMan\Player.cpp(12,10): fatal  error C1083: Não é possível abrir arquivo incluir: 'A.h': No such file or directory
+C:\Users\paulo\Projetos\Judson\Asteroids\Asteroids\PacMan\Level1.cpp(17,10): fatal  error C1083: Não é possível abrir arquivo incluir: 'Pivot.h': No such file or directory
