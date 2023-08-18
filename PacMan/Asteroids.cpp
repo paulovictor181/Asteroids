@@ -2,10 +2,10 @@
 // Asteroids
 //
 // Criação:     14 Ago 2023
-// Atualização: 14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Exercício sobre detecção de colisão
+// Descrição:   Projeto ASTEROIDS
 //
 **********************************************************************************/
 

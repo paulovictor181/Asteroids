@@ -1,16 +1,16 @@
 /**********************************************************************************
 // Level1 (Arquivo de Cabeçalho)
 //
-// Criação:     18 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Nível 1 do jogo PacMan
+// Descrição:   Nível 1 do jogo ASTEROIDS
 //
 **********************************************************************************/
 
-#ifndef _PACMAN_LEVEl1_H_
-#define _PACMAN_LEVEL1_H_
+#ifndef _ASTEROIDS_LEVEl1_H_
+#define _ASTEROIDS_LEVEL1_H_
 
 // ------------------------------------------------------------------------------
 // Inclusões

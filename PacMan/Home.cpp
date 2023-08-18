@@ -1,17 +1,17 @@
 /**********************************************************************************
 // Home (Código Fonte)
 //
-// Criação:     18 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Tela de abertura do jogo PacMan
+// Descrição:   Tela de abertura do jogo ASTEROIDS
 //
 **********************************************************************************/
 
 #include "Engine.h"
 #include "Home.h"
-//#include "Level1.h"
+#include "Level1.h"
 
 // ------------------------------------------------------------------------------
 
@@ -36,8 +36,8 @@ void Home::Update()
         window->Close();
 
     // passa ao primeiro nível com ENTER
-    //if (window->KeyPress(VK_RETURN))
-        //Engine::Next<Level1>();
+    if (window->KeyPress(VK_RETURN))
+        Engine::Next<Level1>();
 }
 
 // ------------------------------------------------------------------------------

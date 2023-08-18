@@ -1,8 +1,8 @@
 /**********************************************************************************
 // Player (Código Fonte)
 //
-// Criação:     01 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
 // Descrição:   Player do jogo PacMan
@@ -16,15 +16,18 @@
 
 Player::Player()
 {
-   // spriteL = new Sprite("Resources/PacManL.png");
-   // spriteR = new Sprite("Resources/PacManR.png");
-   // spriteU = new Sprite("Resources/PacManU.png");
-   // spriteD = new Sprite("Resources/PacManD.png");
+    spriteL = new Sprite("Resources/SpaceshipL.png");
+    spriteR = new Sprite("Resources/SpaceshipR.png");
+    spriteU = new Sprite("Resources/SpaceshipU.png");
+    spriteD = new Sprite("Resources/SpaceshipD.png");
 
-    // imagem do pacman é 48x48 (com borda transparente de 4 pixels)
-    BBox(new Rect(-20, -20, 20, 20));
+    vel = 70;
+
+    // imagem da nave é 92x96 (com borda transparente de 4 pixels)
+    BBox(new Rect(-46, -48, 46, 48));
     MoveTo(480.0f, 450.0f);
     type = PLAYER;
+    currState = DOWN;
 }
 
 // ---------------------------------------------------------------------------------
@@ -39,50 +42,9 @@ Player::~Player()
 
 // ---------------------------------------------------------------------------------
 
-void Player::Stop()
-{
-    velX = 0;
-    velY = 0;
-}
-
-// ---------------------------------------------------------------------------------
-
-void Player::Up()
-{
-    velX = 0;
-    velY = -200.0f;
-}
-
-// ---------------------------------------------------------------------------------
-
-void Player::Down()
-{
-    velX = 0;
-    velY = 200.0f;
-}
-
-// ---------------------------------------------------------------------------------
-
-void Player::Left()
-{
-    velX = -200.0f;
-    velY = 0;
-}
-
-// ---------------------------------------------------------------------------------
-
-void Player::Right()
-{
-    velX = 200.0f;
-    velY = 0;
-}
-
-// ---------------------------------------------------------------------------------
-
 void Player::OnCollision(Object* obj)
 {
-    //if (obj->Type() == PIVOT)
-        //PivotCollision(obj);
+    
 }
 
 // ---------------------------------------------------------------------------------
@@ -91,26 +53,27 @@ void Player::Update()
 {
     if (window->KeyDown(VK_LEFT))
     {
-      
+        currState = LEFT;
+        Translate(-vel * gameTime, 0);
     }
 
     if (window->KeyDown(VK_RIGHT))
-    {
-       
+    {   
+        currState = RIGHT;
+        Translate(vel * gameTime, 0);
     }
 
     if (window->KeyDown(VK_UP))
     {
-      
+        currState = UP;
+        Translate(0, -vel * gameTime);
     }
 
     if (window->KeyDown(VK_DOWN))
     {
-
+        currState = DOWN;
+        Translate(0, vel * gameTime);
     }
-
-    // atualiza posição
-    Translate(velX * gameTime, velY * gameTime);
 
     // mantém player dentro da tela
     if (x + 20 < 0)
@@ -130,7 +93,22 @@ void Player::Update()
 
 void Player::Draw()
 {
-   
+   switch(currState)
+    {
+    case LEFT:  spriteL->Draw(x, y, Layer::UPPER); break;
+    case RIGHT: spriteR->Draw(x, y, Layer::UPPER); break;
+    case UP:    spriteU->Draw(x, y, Layer::UPPER); break;
+    case DOWN:  spriteD->Draw(x, y, Layer::UPPER); break;
+    default: 
+        switch(nextState)
+        {
+        case LEFT:  spriteL->Draw(x, y, Layer::UPPER); break;
+        case RIGHT: spriteR->Draw(x, y, Layer::UPPER); break;
+        case UP:    spriteU->Draw(x, y, Layer::UPPER); break;
+        case DOWN:  spriteD->Draw(x, y, Layer::UPPER); break;
+        default:    spriteL->Draw(x, y, Layer::UPPER);
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------------

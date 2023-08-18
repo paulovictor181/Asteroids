@@ -1,16 +1,16 @@
 /**********************************************************************************
 // Home (Arquivo de Cabeçalho)
 //
-// Criação:     18 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Tela de abertura do jogo PacMan
+// Descrição:   Tela de abertura do jogo Asteroids
 //
 **********************************************************************************/
 
-#ifndef _PACMAN_HOME_H_
-#define _PACMAN_HOME_H_
+#ifndef _ASTEROIDS_HOME_H_
+#define _ASTEROIDS_HOME_H_
 
 // ------------------------------------------------------------------------------
 // Inclusões

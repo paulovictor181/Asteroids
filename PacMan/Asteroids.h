@@ -1,20 +1,20 @@
 /**********************************************************************************
-// PacMan (Arquivo de Cabeçalho)
+// Asteroids (Arquivo de Cabeçalho)
 //
-// Criação:     01 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Exercício sobre detecção de colisão
+// Descrição:   Projeto Avaliativo
 //
 **********************************************************************************/
 
-#ifndef _PACMAN_H_
-#define _PACMAN_H_
+#ifndef _ASTEROIDS_H_
+#define _ASTEROIDS_H_
 
 // ------------------------------------------------------------------------------
 
-enum PacManObjects
+enum AsteroidsObjects
 {
     PLAYER,
     ASTEROIDS,

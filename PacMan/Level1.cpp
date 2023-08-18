@@ -1,11 +1,11 @@
 /**********************************************************************************
 // Level1 (Código Fonte)
 //
-// Criação:     18 Jan 2013
-// Atualização: 04 Mar 2023
+// Criação:     14 Ago 2023
+// Atualização: 18 Ago 2023
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Nível 1 do jogo PacMan
+// Descrição:   Nível 1 do jogo Asteroids
 //
 **********************************************************************************/
 
@@ -35,8 +35,6 @@ void Level1::Init()
 
     // cria pontos de mudança de direção
 
-    bool left, right, up, down;
-    float posX, posY;
 
 }
 

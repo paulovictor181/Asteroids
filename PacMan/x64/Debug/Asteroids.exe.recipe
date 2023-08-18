@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\paulo\Projetos\Judson\Asteroids\Asteroids\x64\Debug\Asteroids.exe</FullPath>
+      <FullPath>C:\Users\paulo\Projetos\AulaJudson\Asteroids\Asteroids\x64\Debug\Asteroids.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\paulo\Projetos\Judson\Asteroids\Asteroids\PacMan\Shaders\Pixel.cso</FullPath>
+      <FullPath>C:\Users\paulo\Projetos\AulaJudson\Asteroids\Asteroids\PacMan\Shaders\Pixel.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\paulo\Projetos\Judson\Asteroids\Asteroids\PacMan\Shaders\Vertex.cso</FullPath>
+      <FullPath>C:\Users\paulo\Projetos\AulaJudson\Asteroids\Asteroids\PacMan\Shaders\Vertex.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
